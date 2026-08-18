@@ -1,0 +1,334 @@
+/* =========================
+   Base & Reset
+   ========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #faf7f5; /* soft warm background */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   Layout Containers
+   ========================= */
+header,
+nav,
+section,
+footer {
+    width: 100%;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+nav {
+    background: #2b2b2b;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* First UL: main nav (HOME, CONTACT) */
+nav > ul:first-child {
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+/* Second UL: section links */
+nav > ul:nth-child(2) {
+    justify-content: flex-start;
+    font-size: 0.9rem;
+}
+
+nav a {
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav a:focus {
+    background: #d4a373;
+    color: #2b2b2b;
+}
+
+/* =========================
+   Header / Hero
+   ========================= */
+header {
+    background: linear-gradient(135deg, #f3e7d9 0%, #e9d8c3 100%);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #d4a373;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #5a3a2a;
+    letter-spacing: 0.5px;
+}
+
+blockquote {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 1.25rem;
+    background: #fff;
+    border-left: 4px solid #d4a373;
+    font-style: italic;
+    color: #555;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   Sections
+   ========================= */
+section {
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #5a3a2a;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+section h3 {
+    font-size: 1.3rem;
+    color: #7a523a;
+    margin: 1.25rem 0 0.75rem;
+}
+
+/* =========================
+   Cake Grid
+   ========================= */
+/* The inner div that holds all cake categories */
+section > div > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Each category block (#cake, #ancake, #bread, #dessert) */
+#cake,
+#ancake,
+#bread,
+#dessert {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+#cake img,
+#ancake img,
+#bread img,
+#dessert img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-top: 0.5rem;
+}
+
+/* =========================
+   Videos Section
+   ========================= */
+#cakevideo {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+#cakevideo > div {
+    margin: 1.5rem 0;
+}
+
+#cakevideo iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================
+   Contact Page Specifics
+   ========================= */
+.contact-page header {
+    background: linear-gradient(135deg, #f3e7d9 0%, #e9d8c3 100%);
+}
+
+.contact-page section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form styling (even though it uses a table) */
+form table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 0.75rem;
+}
+
+form td {
+    vertical-align: top;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Labels (first column) */
+form td:first-child {
+    width: 35%;
+    font-weight: 600;
+    color: #5a3a2a;
+    padding-right: 1rem;
+    text-align: right;
+}
+
+/* Inputs (second column) */
+form td:last-child {
+    width: 65%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #d4a373;
+    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.25);
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.1);
+}
+
+form label[for="Newsletter"] {
+    font-weight: 400;
+    color: #444;
+}
+
+form input[type="submit"] {
+    background: #d4a373;
+    color: #2b2b2b;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background: #c49261;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background: #2b2b2b;
+    color: #ddd;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================
+   Responsive Tweaks
+   ========================= */
+@media (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    form td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.25rem 0;
+    }
+
+    form td:first-child {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 0.25rem;
+    }
+}
