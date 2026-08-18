@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tags & Attributes</title>
+		<meta charset="UTF-8">
+		<style>
+		body {
+			line-height: 1;
+		}
+		h4 {
+			font-style: underline;
+		}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<!--bookmark-->
+			<a href="#link"><li>Go to link</li></a>
+			<a href="#video"><li>Go to video</li></a>
+		</ul>
+		<h4 id="link">Opening Link in New Tab</h4>
+		<a href="https://www.w3schools.com/html/" target="new">Learn HTML</a><br> <!--use _blank instead of new-->
+		<a href="https://www.w3schools.com/js/default.asp">Learn Javascript</a><br>
+		<h4>Emphasis</h4>
+		<em>Another way to add emphasis to text</em>
+		<h4>Article Tag</h4>
+		<article>
+			<p>An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
+		</article>
+		<h4>Time Tag</h4>
+		<time>12:05<time>
+		<p>tag defines a specific time (or datetime).<time datetime="2008-02-14 20:00">Valentines day</time></p>
+		<h4>Summary and Details Tag</h4>
+		<details>
+			<summary>Define Details and Summary Tag</summary>
+			<p>The Details tag is often used to create an interactive widget that the user can open and close. By default, the widget is closed. When open, it expands, and displays the content within. The summary tag is used in conjunction with details to specify a visible heading for the details.</p>
+		</details>
+		<h4 id="video">Video & Audio Tag</h4>
+		<video width="320" height="240" controls>
+			<source src="Learn HTML.mp4" type="video/mp4">
+		</video>
+	</body>
+</html>
