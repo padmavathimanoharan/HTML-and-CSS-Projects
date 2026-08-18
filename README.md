@@ -9,3 +9,6 @@ To test this module, run Basic_HTML_1.html, which provides further navigation li
 
 **Module 4:** Covers CSS concepts and External CSS file link.
 To test this module, run Basic_HTML_3.html, which provides further navigation links.
+
+**Module 5:** Basic HTML Website Creation and HTML Tags Assignment.
+To test this module, run Module5_Assignment.html, and for the Siva's Cake Creation website run the index.html.
